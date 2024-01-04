@@ -656,7 +656,7 @@ img {
         margin-bottom: 16px;
 }
 .modal-form-name {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 .form-label {
     display: block;
@@ -722,7 +722,9 @@ img {
 .form-comment::placeholder {
     color: rgba(46, 47, 66, 0.40);
 }
-
+.label-checkbox {
+    margin-bottom: 24px;
+}
 .form-agreement {
     display: block;
     margin-bottom: 24px;
