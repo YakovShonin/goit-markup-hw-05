@@ -147,10 +147,13 @@ img {
         letter-spacing: 0.02em;
 }
 .hero .hero-button:hover,
-.hero .hero-button:focus {
+.form-button:hover,
+.hero .hero-button:focus,
+.form-button:focus {
     background-color: #404bbf;
 }
-.hero-button {
+.hero-button,
+.form-button {
     display: block;
         background: #4D5AE5;
         color: #FFF;
@@ -164,6 +167,7 @@ img {
             border: none;
             margin: 0 auto;
             min-width: 169px;
+            min-height: 56px;
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -604,6 +608,12 @@ img {
     min-width: 24px;
     height: 24px;
     color: #2E2F42;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404BBF;
 }
 
 .modal-btn-icon {
@@ -625,7 +635,9 @@ img {
         width: 360px;
         margin-bottom: 16px;
 }
-
+.modal-form-name {
+    margin-bottom: 8px;
+}
 .form-label {
     display: block;
     margin-bottom: 4px;
@@ -669,7 +681,59 @@ img {
 }
 .form-comment {
     width: 100%;
-    resize: vertical;
+    padding: 8px 16px;
+    resize: none;
+    outline: transparent;
     min-height: 120px;
     max-height: 180px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment:focus {
+    border-color: #4D5AE5;
+}
+.form-comment::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+}
+
+.form-agreement {
+    display: block;
+    margin-bottom: 24px;
+    color: #8E8F99;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    user-select: none;
+}
+
+.checkbox {}
+
+.form-agreement-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    stroke-width: 1px;
+    stroke: rgba(46, 47, 66, 0.40);
+}
+
+.checkbox:checked + .form-agreement-checkbox {
+    background-color: #404BBF;
+}
+.form-agreement-icon {
+    opacity: 0;
+}
+.checkbox:checked + .form-agreement-checkbox > .form-agreement-icon {
+    opacity: 1;
+}
+
+.form-agreement-link {
+    color: #4D5AE5;
+    text-decoration-line: underline;
 }
